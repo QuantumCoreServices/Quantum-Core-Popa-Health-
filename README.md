@@ -1,4 +1,4 @@
-# POPA Health AI
+# POPA Health Patient Portal
 
 POPA Health AI is a comprehensive, AI-driven patient engagement platform designed for modern healthcare. Leveraging cutting-edge technologies, the platform provides personalized health recommendations, appointment management, and a virtual health assistant to answer patient queries and deliver actionable insights.
 
