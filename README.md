@@ -96,16 +96,16 @@ uvicorn app.main:app --reload
 # Deployment
 Infrastructure Provisioning
 Use Terraform to set up AWS resources:
-
-
 cd infrastructure
 terraform init
 terraform apply
 
-# Containerization & Deployment
+## Containerization & Deployment
 # Build Docker images
 docker build -t backend:latest ./backend
 docker build -t frontend:latest ./frontend
+
+
 
 # Push images to AWS ECR (after login)
 aws ecr get-login-password | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com
