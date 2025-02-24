@@ -81,7 +81,7 @@ POPA-Health-AI/ ├── backend/ # FastAPI backend service │
 
 # Clone the Repository
 
-```bash
+``bash
 git clone https://github.com/Obionedonthoeme/POPA-Health-AI.git
 cd POPA-Health-AI
 
@@ -102,7 +102,7 @@ cd infrastructure
 terraform init
 terraform apply
 
-#Containerization & Deployment
+# Containerization & Deployment
 # Build Docker images
 docker build -t backend:latest ./backend
 docker build -t frontend:latest ./frontend
@@ -116,7 +116,7 @@ docker push <ecr_repo>/frontend:latest
 
 Deploy the containers to AWS EKS using Kubernetes manifests.
 
-#CI/CD Pipeline
+# CI/CD Pipeline
 The project uses GitHub Actions for automated workflows:
 
 Builds Docker images
