@@ -79,7 +79,7 @@ POPA-Health-AI/ ├── backend/ # FastAPI backend service │
 
 ## Setup & Installation
 
-### Clone the Repository
+# Clone the Repository
 
 ```bash
 git clone https://github.com/Obionedonthoeme/POPA-Health-AI.git
