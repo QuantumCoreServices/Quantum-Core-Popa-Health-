@@ -100,8 +100,7 @@ cd infrastructure
 terraform init
 terraform apply
 
-## Containerization & Deployment
-# Build Docker images
+## Containerization & Deployment Build Docker image
 docker build -t backend:latest ./backend
 docker build -t frontend:latest ./frontend
 
@@ -122,7 +121,14 @@ The project uses GitHub Actions for automated workflows:
 Builds Docker images
 Pushes to AWS ECR
 Deploys to AWS EKS
+
+
 Pipeline configuration: .github/workflows/ci-cd.yml
+
+
+---
+
+
 
 
 
