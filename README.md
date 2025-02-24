@@ -1,6 +1,6 @@
-# POPA Health Patient Portal
+# Quantum-Core-Popa-Health - White-Label Patient Portal
 
-POPA Health AI is a comprehensive, AI-driven patient engagement platform designed for modern healthcare. Leveraging cutting-edge technologies, the platform provides personalized health recommendations, appointment management, and a virtual health assistant to answer patient queries and deliver actionable insights.
+Quantum-Core-Popa-Health is a comprehensive, white-label patient portal designed to enhance patient engagement for healthcare providers. This platform provides features such as appointment management, lab result viewing, prescription management, and personalized health recommendations. The solution leverages modern technologies, ensuring secure and seamless integration with EHR systems and wearable devices while maintaining a customizable interface for different clinics and healthcare providers.
 
 ## Table of Contents
 
@@ -17,113 +17,171 @@ POPA Health AI is a comprehensive, AI-driven patient engagement platform designe
 
 ## Overview
 
-POPA Health Patient Portal integrates a robust FastAPI/Python backend with a modern React-based frontend to create a secure, scalable, and user-friendly patient engagement system. The platform seamlessly integrates with wearable devices (Apple HealthKit, Fitbit, Garmin) and EHR systems (FHIR/HL7) to collect and analyze patient data, providing healthcare professionals with real-time insights and patients with personalized recommendations.
+Quantum-Core-Popa-Health integrates a robust FastAPI/Python backend with a modern React-based frontend to deliver a customizable patient engagement solution. The platform allows clinics to brand the portal with their logos, color schemes, and custom content while offering patients a unified experience for managing appointments, prescriptions, lab results, and health data. The platform ensures HIPAA compliance, secure API interactions, and seamless data synchronization with wearable devices (Apple HealthKit, Fitbit, Garmin) and EHR systems using FHIR/HL7 standards.
 
 ## Features
 
-- **Conversational AI:** Leverages Large Language Models (LLMs) for natural language processing and virtual health assistance.
-- **Predictive Analytics:** Uses AI to monitor patient health data and generate personalized recommendations.
-- **Secure APIs:** FastAPI backend with JWT-based authentication and advanced encryption for data privacy.
-- **Modern Frontend:** React-based UI with animated dashboards and interactive elements.
-- **Device & EHR Integration:** Connects to wearable devices and EHR systems to pull comprehensive health metrics.
-- **Scalable Infrastructure:** Deployed on AWS using Kubernetes (EKS), with Infrastructure as Code (Terraform) and a robust CI/CD pipeline using GitHub Actions.
+- Customizable branding for clinics, including logos, colors, and content.
+- Secure patient authentication with JWT-based access control.
+- Appointment booking, rescheduling, and cancellation functionalities.
+- Access to lab results, prescription management, and medical records.
+- Integration with wearable devices and EHR systems using FHIR/HL7 protocols.
+- Personalized health recommendations powered by AI and predictive analytics.
+- Scalable cloud deployment using AWS EKS with Infrastructure as Code via Terraform.
+- Automated CI/CD pipeline using GitHub Actions for seamless deployments.
 
 ## Architecture
 
-The system is designed with a microservices approach:
+The platform is designed with a microservices architecture, ensuring scalability and maintainability:
 
-- **Backend:** FastAPI service handling secure API endpoints, authentication, and AI/ML services.
-- **Frontend:** A React application providing a dynamic, user-friendly dashboard.
-- **Integration Modules:** Services to connect with wearable device APIs and EHR systems using FHIR/HL7 standards.
-- **Infrastructure:** AWS cloud deployment using EKS for container orchestration and Terraform for Infrastructure as Code.
-- **CI/CD:** Automated builds, tests, and deployments using GitHub Actions.
+- Backend: FastAPI service handling authentication, appointments, lab results, prescriptions, and AI-driven health insights.
+- Frontend: React application offering an intuitive user interface with customizable branding options.
+- Integration Modules: Services to connect with wearable APIs and EHR systems.
+- Infrastructure: AWS deployment managed through Terraform and Kubernetes for container orchestration.
+- CI/CD: Automated workflows for continuous integration and deployment using GitHub Actions.
 
 ## Technology Stack
 
-- **Backend:** Python, FastAPI, SQLAlchemy, JWT
-- **Frontend:** React, Vite, Tailwind CSS, Framer Motion
-- **AI/ML:** Integration with LLMs (e.g., OpenAI API) and custom predictive analytics models
-- **Cloud & Infrastructure:** AWS (EKS, RDS, S3), Terraform, Kubernetes
-- **CI/CD:** GitHub Actions, Docker, AWS ECR
+- Backend: Python, FastAPI, SQLAlchemy, JWT, Pydantic
+- Frontend: React, Vite, Tailwind CSS
+- AI/ML: Integration with LLMs for conversational AI and predictive analytics
+- Infrastructure: AWS (EKS, RDS, S3), Terraform, Kubernetes, Docker
+- CI/CD: GitHub Actions, AWS ECR
 
 ## Project Structure
 
+```
+Quantum-Core-Popa-Health/
+├── backend/                      # FastAPI backend service
+│   ├── app/
+│   │   ├── main.py                # Entry point for the FastAPI app
+│   │   ├── routes/                # API routes (appointments, patients, lab results, prescriptions)
+│   │   ├── models/                # Database models
+│   │   ├── services/              # Business logic and external service integrations
+│   │   └── utils/                 # Utility functions and helpers
+│   ├── Dockerfile                 # Docker configuration for backend
+│   └── requirements.txt           # Python dependencies
+├── frontend/                      # React frontend application
+│   ├── src/
+│   │   ├── components/            # Reusable UI components
+│   │   ├── pages/                 # Page-level components (Appointments, Lab Results, Profile, etc.)
+│   │   └── services/              # API service calls
+│   ├── Dockerfile                 # Docker configuration for frontend
+│   ├── package.json               # Node.js dependencies
+│   └── README.md                  # Frontend documentation
+├── infrastructure/                # Terraform configurations for AWS resources
+│   ├── main.tf                    # Main Terraform configuration
+│   ├── variables.tf               # Terraform variables
+│   └── outputs.tf                 # Terraform output configurations
+├── .github/                       # GitHub Actions workflows
+│   └── workflows/
+│       └── ci-cd.yml              # CI/CD pipeline configuration
+├── .gitignore                     # Files and folders to ignore
+└── README.md                      # This file
+```
 
+## Setup & Installation
 
+### 1. Clone the Repository
 
-POPA-Health-AI/ ├── backend/ # FastAPI backend service │
-├── app/ │ │
-├── main.py # FastAPI application entry point │ 
-│ ├── routes/ # API route definitions │ 
-│ ├── models/ # Database models │
-│ └── services/ # Business logic and integrations │
-├── Dockerfile # Backend Docker configuration │
-└── requirements.txt # Python dependencies ├
-── frontend/ # React frontend application │ 
-├── src/ │ │ ├── components/ # UI components and animations │
-│ ├── pages/ # Page-level components │
-│ └── services/ # API utilities │
-├── Dockerfile # Frontend Docker configuration │ 
-├── package.json # Node.js dependencies │
-└── README.md # Frontend documentation ├
-── infrastructure/ # Terraform configurations │
-├── main.tf # Main Terraform setup │
-├── variables.tf # Variables definition │
-└── outputs.tf # Outputs from Terraform ├
-── .github/ # CI/CD workflows │ 
-└── workflows/ │ └── ci-cd.yml # GitHub Actions pipeline ├
-── .gitignore # Ignored files and folders
-└── README.md # Project documentation
+```bash
+git clone https://github.com/Obionedonthoeme/Quantum-Core-Popa-Health.git
+cd Quantum-Core-Popa-Health
+```
 
+### 2. Backend Setup
 
-
-
-
-# Clone the Repository
-
-``bash
-git clone https://github.com/Obionedonthoeme/POPA-Health-AI.git
-cd POPA-Health-AI
-
-
-# Setup & Installation
+```bash
 cd backend
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+```
 
-# Deployment
-Infrastructure Provisioning
-Use Terraform to set up AWS resources:
-cd infrastructure
+### 3. Frontend Setup
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+## Deployment
+
+### Infrastructure Provisioning
+
+Provision AWS resources using Terraform:
+
+```bash
+cd ../infrastructure
 terraform init
 terraform apply
+```
 
-## Containerization & Deployment Build Docker image
-docker build -t backend:latest ./backend
-docker build -t frontend:latest ./frontend
+### Containerization and Deployment
 
+Build and push Docker images to AWS ECR:
 
+```bash
+# Build images
+docker build -t backend:latest ../backend
+docker build -t frontend:latest ../frontend
 
-# Push images to AWS ECR (after login)
+# Authenticate with AWS ECR
 aws ecr get-login-password | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com
+
+# Tag and push images
 docker tag backend:latest <ecr_repo>/backend:latest
 docker tag frontend:latest <ecr_repo>/frontend:latest
 docker push <ecr_repo>/backend:latest
 docker push <ecr_repo>/frontend:latest
+```
 
-Deploy the containers to AWS EKS using Kubernetes manifests.
+Deploy containers to AWS EKS:
 
-# CI/CD Pipeline
-The project uses GitHub Actions for automated workflows:
+```bash
+kubectl apply -f k8s/backend-deployment.yml
+kubectl apply -f k8s/frontend-deployment.yml
+```
 
-Builds Docker images
-Pushes to AWS ECR
-Deploys to AWS EKS
+## CI/CD Pipeline
 
+The project includes a GitHub Actions-based CI/CD pipeline:
 
-Pipeline configuration: .github/workflows/ci-cd.yml
+- Triggers on pushes to the `main` branch.
+- Builds Docker images for the backend and frontend.
+- Pushes images to AWS ECR.
+- Deploys services to AWS EKS using Kubernetes manifests.
+
+To manually trigger the pipeline:
+
+```bash
+git commit -am "Trigger deployment"
+git push origin main
+```
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to your fork:
+   ```bash
+   git push origin feature/your-feature
+   ```
+5. Open a pull request for review.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
 
 
 ---
