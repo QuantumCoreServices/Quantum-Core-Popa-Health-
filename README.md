@@ -77,7 +77,7 @@ POPA-Health-AI/ ├── backend/ # FastAPI backend service │
 
 
 
-## Setup & Installation
+
 
 # Clone the Repository
 
@@ -86,7 +86,7 @@ git clone https://github.com/Obionedonthoeme/POPA-Health-AI.git
 cd POPA-Health-AI
 
 
-
+# Setup & Installation
 cd backend
 python3 -m venv venv
 source venv/bin/activate
