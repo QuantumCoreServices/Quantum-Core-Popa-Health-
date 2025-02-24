@@ -17,7 +17,7 @@ POPA Health AI is a comprehensive, AI-driven patient engagement platform designe
 
 ## Overview
 
-POPA Health AI integrates a robust FastAPI/Python backend with a modern React-based frontend to create a secure, scalable, and user-friendly patient engagement system. The platform seamlessly integrates with wearable devices (Apple HealthKit, Fitbit, Garmin) and EHR systems (FHIR/HL7) to collect and analyze patient data, providing healthcare professionals with real-time insights and patients with personalized recommendations.
+POPA Health Patient Portal integrates a robust FastAPI/Python backend with a modern React-based frontend to create a secure, scalable, and user-friendly patient engagement system. The platform seamlessly integrates with wearable devices (Apple HealthKit, Fitbit, Garmin) and EHR systems (FHIR/HL7) to collect and analyze patient data, providing healthcare professionals with real-time insights and patients with personalized recommendations.
 
 ## Features
 
