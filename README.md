@@ -1,4 +1,4 @@
-# Quantum-Core-Popa-Health - White-Label Patient Portal
+# Popa-Health - White-Label Patient Portal
 
 Quantum-Core-Popa-Health is a comprehensive, white-label patient portal designed to enhance patient engagement for healthcare providers. This platform provides features such as appointment management, lab result viewing, prescription management, and personalized health recommendations. The solution leverages modern technologies, ensuring secure and seamless integration with EHR systems and wearable devices while maintaining a customizable interface for different clinics and healthcare providers.
 
